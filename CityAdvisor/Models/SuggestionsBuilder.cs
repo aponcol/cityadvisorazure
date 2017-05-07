@@ -70,10 +70,10 @@ namespace CityAdvisor.Models
 			cities.Sort(cityComparison);
 
 			List<City> citiesForSuggestions = cities.GetRange(0, 10);
+            float score = 1;
 			foreach (City cityForSuggestion in citiesForSuggestions)
 			{
 				Console.WriteLine(cityForSuggestion.name);
-				float score = 1;
 				suggestions.Add(new Suggestion(cityForSuggestion, score));
 				score -= 0.1f;
 			}
