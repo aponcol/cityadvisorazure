@@ -9,7 +9,7 @@ namespace CityAdvisor.Tests.Models
     [TestFixture]
     public class SuggestionsBuilderTest
     {
-        SuggestionsBuilder builder = new SuggestionsBuilder("cities_test.txt");
+        SuggestionsBuilder builder = new SuggestionsBuilder("cities_test_csv.csv");
 
         [Test]
         public void WhenAPerfectCityNameMatchIsFoundReturnItWithFullWeight()

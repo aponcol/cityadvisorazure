@@ -12,7 +12,7 @@ namespace CityAdvisor.Models
         public SuggestionsBuilder(string file)
         {
             CityDataImporter importer = new CityDataImporter();
-            cities = importer.GetCitiesFromFile(file);
+            cities = importer.GetCitiesFromCsvFile(file);
         }
 
         public List<Suggestion> GetSuggestions()

@@ -88,7 +88,7 @@
     <Compile Include="Controllers\SuggestionsControllerTest.cs" />
     <Compile Include="Models\CityDataImporterTest.cs" />
     <Compile Include="Models\CityTest.cs" />
-    <Compile Include="Models\SuggestionsBuilder.cs" />
+    <Compile Include="Models\SuggestionsBuilderTest.cs" />
     <Compile Include="Models\SuggestionTest.cs" />
   </ItemGroup>
   <ItemGroup>

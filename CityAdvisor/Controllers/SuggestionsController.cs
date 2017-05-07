@@ -12,7 +12,10 @@ namespace CityAdvisor.Controllers
         [HttpGet]
         public JsonResult Index(string q = "")
 		{
-            SuggestionsBuilder builder = new SuggestionsBuilder("Content/cities_canada-usa.tsv");
+            string baseDirectory = AppDomain.CurrentDomain.BaseDirectory;
+            string filePath = baseDirectory + "Content/cities_canada-usa_clean_csv.csv";
+
+            SuggestionsBuilder builder = new SuggestionsBuilder(filePath);
             builder.cityInput = q;
             List<Suggestion> suggestions = builder.GetSuggestions();
 

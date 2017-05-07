@@ -43,16 +43,51 @@ namespace CityAdvisor.Models
             return cities;
         }
 
+		public List<City> GetCitiesFromCsvFile(string filePath)
+		{
+			List<City> cities = new List<City>();
+
+			string line;
+
+			// Read the file and display it line by line.
+			using (StreamReader file = new StreamReader(filePath))
+			{
+				// First line is the headers
+				file.ReadLine();
+
+				while ((line = file.ReadLine()) != null)
+				{
+
+					char[] delimiters = new char[] {','};
+					string[] parts = line.Split(delimiters);
+					City city = GetCityFromStringParts(parts);
+					cities.Add(city);
+				}
+
+				file.Close();
+			}
+
+			return cities;
+		}
+
+
+
         City GetCityFromStringParts(string[] parts)
         {
-			string cityName = parts[1];
-			string cityAltName = parts[3].Replace('"', ' ').Trim();
-			string cityCountry = parts[8];
-			double cityLatitude = Convert.ToDouble(parts[4]);
-			double cityLongitude = Convert.ToDouble(parts[5]);
-			City city = new City(cityName, cityAltName, cityCountry);
-			city.SetLocation(cityLatitude, cityLongitude);
-            return city;
+            // Skip wrong cities
+            if (parts.GetUpperBound(0) < 4) {
+                return new City("", "", "");
+            } else {
+				string cityName = parts.GetValue(1).ToString();
+				string cityAltName = parts.GetValue(3).ToString().Replace('"', ' ').Trim();
+				string cityCountry = parts.GetValue(8).ToString();
+
+                double cityLatitude = Convert.ToDouble(parts.GetValue(4));
+				double cityLongitude = Convert.ToDouble(parts.GetValue(5));
+				City city = new City(cityName, cityAltName, cityCountry);
+				city.SetLocation(cityLatitude, cityLongitude);
+				return city;   
+            }
         }
     }
 }

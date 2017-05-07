@@ -1,16 +1,36 @@
 ﻿<Properties StartupConfiguration="{1DE7AE4B-B55E-4237-A486-7ECCF8E6AA58}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="CityAdvisor/packages.config">
+  <MonoDevelop.Ide.Workbench ActiveDocument="CityAdvisor.Tests/Models/SuggestionsBuilder.cs">
     <Files>
-      <File FileName="CityAdvisor/Controllers/SuggestionsController.cs" Line="19" Column="1" />
+      <File FileName="CityAdvisor/Controllers/SuggestionsController.cs" Line="16" Column="75" />
       <File FileName="CityAdvisor/App_Start/RouteConfig.cs" Line="13" Column="33" />
       <File FileName="CityAdvisor/Controllers/HomeController.cs" Line="1" Column="1" />
       <File FileName="CityAdvisor.Tests/Controllers/HomeControllerTest.cs" Line="19" Column="34" />
       <File FileName="CityAdvisor/packages.config" Line="14" Column="12" />
+      <File FileName="CityAdvisor/Models/SuggestionsBuilder.cs" Line="15" Column="48" />
+      <File FileName="CityAdvisor/Models/CityDataImporter.cs" Line="61" Column="43" />
+      <File FileName="CityAdvisor.Tests/Models/CityDataImporterTest.cs" Line="47" Column="29" />
+      <File FileName="CityAdvisor.Tests/Models/SuggestionsBuilder.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="MonoDevelop.UnitTesting.TestPad">
         <State name="__root__">
-          <Node name="CityAdvisor" expanded="True" selected="True" />
+          <Node name="CityAdvisor" expanded="True">
+            <Node name="CityAdvisor.Tests" expanded="True">
+              <Node name="CityAdvisor" expanded="True">
+                <Node name="Tests" expanded="True">
+                  <Node name="Controllers" expanded="True">
+                    <Node name="SuggestionsControllerTest" expanded="True" />
+                  </Node>
+                  <Node name="Models" expanded="True">
+                    <Node name="CityDataImporterTest" expanded="True" />
+                    <Node name="SuggestionsBuilderTest" expanded="True">
+                      <Node name="WhenAPerfectCityNameMatchIsFoundReturnItWithFullWeight" selected="True" />
+                    </Node>
+                  </Node>
+                </Node>
+              </Node>
+            </Node>
+          </Node>
         </State>
       </Pad>
     </Pads>
