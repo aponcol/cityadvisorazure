@@ -1,0 +1,25 @@
+﻿<Properties StartupConfiguration="{1DE7AE4B-B55E-4237-A486-7ECCF8E6AA58}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="CityAdvisor/packages.config">
+    <Files>
+      <File FileName="CityAdvisor/Controllers/SuggestionsController.cs" Line="19" Column="1" />
+      <File FileName="CityAdvisor/App_Start/RouteConfig.cs" Line="13" Column="33" />
+      <File FileName="CityAdvisor/Controllers/HomeController.cs" Line="1" Column="1" />
+      <File FileName="CityAdvisor.Tests/Controllers/HomeControllerTest.cs" Line="19" Column="34" />
+      <File FileName="CityAdvisor/packages.config" Line="14" Column="12" />
+    </Files>
+    <Pads>
+      <Pad Id="MonoDevelop.UnitTesting.TestPad">
+        <State name="__root__">
+          <Node name="CityAdvisor" expanded="True" selected="True" />
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.CityAdvisor PreferredExecutionTarget="MonoDevelop.Default" />
+  <MultiItemStartupConfigurations />
+</Properties>
