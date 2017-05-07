@@ -9,8 +9,14 @@ namespace CityAdvisor
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            //routes.MapRoute(
+            //    name: "Default",
+            //    url: "{controller}/{q}",
+            //    defaults: new { controller = "Suggestions", action = "Main", q = UrlParameter.Optional }
+            //);
+
             routes.MapRoute(
-                name: "Default",
+                name: "Suggestions",
                 url: "suggestions/{q}",
                 defaults: new { controller = "Suggestions", action = "Index", q = UrlParameter.Optional }
             );

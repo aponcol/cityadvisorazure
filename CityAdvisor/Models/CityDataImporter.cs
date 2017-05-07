@@ -6,7 +6,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Mvc.Ajax;
 using System.IO;
-
+using System.Globalization;
 
 namespace CityAdvisor.Models
 {
@@ -82,8 +82,8 @@ namespace CityAdvisor.Models
 				string cityAltName = parts.GetValue(3).ToString().Replace('"', ' ').Trim();
 				string cityCountry = parts.GetValue(8).ToString();
 
-                double cityLatitude = Convert.ToDouble(parts.GetValue(4));
-				double cityLongitude = Convert.ToDouble(parts.GetValue(5));
+                double cityLatitude = Convert.ToDouble(parts.GetValue(4).ToString(), CultureInfo.InvariantCulture);
+				double cityLongitude = Convert.ToDouble(parts.GetValue(5).ToString(), CultureInfo.InvariantCulture);
 				City city = new City(cityName, cityAltName, cityCountry);
 				city.SetLocation(cityLatitude, cityLongitude);
 				return city;   
