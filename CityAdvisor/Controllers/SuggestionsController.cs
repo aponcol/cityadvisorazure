@@ -33,13 +33,15 @@ namespace CityAdvisor.Controllers
         }
 
         [HttpGet]
-        public JsonResult Index(string q = "")
+        public JsonResult Index(string q = "", double latitude = 0.0d, double longitude = 0.0d)
 		{
             string baseDirectory = AppDomain.CurrentDomain.BaseDirectory;
-            string filePath = baseDirectory + "Content/cities_test_clean_csv.csv";
+            string filePath = baseDirectory + "Content/cities_canada-usa_clean_csv.csv";
 
             SuggestionsBuilder builder = new SuggestionsBuilder(filePath);
             builder.cityInput = q;
+            builder.latitudeInput = latitude;
+            builder.longitudeInput = longitude;
             List<Suggestion> suggestions = builder.GetSuggestions();
 
             var suggestionResult = new { suggestions = suggestions};

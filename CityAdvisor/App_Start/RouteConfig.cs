@@ -18,7 +18,14 @@ namespace CityAdvisor
             routes.MapRoute(
                 name: "Suggestions",
                 url: "suggestions/{q}",
-                defaults: new { controller = "Suggestions", action = "Index", q = UrlParameter.Optional }
+                defaults: new
+                {
+                    controller = "Suggestions",
+                    action = "Index",
+                    q = UrlParameter.Optional, 
+                    latitude = UrlParameter.Optional, 
+                    longitude = UrlParameter.Optional
+                }
             );
         }
     }

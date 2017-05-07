@@ -27,17 +27,6 @@ namespace CityAdvisor.Tests.Controllers
             Assert.IsInstanceOf(typeof(JsonResult), result);
         }
 
-        //[Test]
-        //public void resultWithNoParamsIsEmptySuggestionsArray()
-        //{
-        //    var result = controller.Index();
-        //    var suggestions = result.Data.ToString();
-
-        //    Console.WriteLine(suggestions);
-
-        //    //Assert.IsNull(result.Data.GetType().GetProperty("suggestions"));
-        //}
-
         [Test]
         public void resultOfIndexWithExactMatchIsProperJsonObject()
         {

@@ -8,6 +8,7 @@ namespace CityAdvisor.Models
         public string alt_name { get; set; }
         public Coordinate location { get; set; }
         public string country { get; set; }
+        public double distanceToTarget { get; set; }
 
         public City(
             string nameFromFile, 
