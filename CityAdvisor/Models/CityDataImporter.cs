@@ -16,33 +16,6 @@ namespace CityAdvisor.Models
         {
         }
 
-        public List<City> GetCitiesFromFile(string filePath)
-        {
-            List<City> cities = new List<City>();
-
-			string line;
-
-			// Read the file and display it line by line.
-			using (StreamReader file = new StreamReader(filePath))
-			{
-                // First line is the headers
-                file.ReadLine();
-
-				while ((line = file.ReadLine()) != null)
-				{
-
-					char[] delimiters = new char[] { '\t' };
-					string[] parts = line.Split(delimiters);
-                    City city = GetCityFromStringParts(parts);
-                    cities.Add(city);
-				}
-
-				file.Close();
-			}
-
-            return cities;
-        }
-
 		public List<City> GetCitiesFromCsvFile(string filePath)
 		{
 			List<City> cities = new List<City>();
